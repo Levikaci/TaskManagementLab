@@ -1,0 +1,27 @@
+@host = http://localhost:5089
+
+### Список задач
+GET {{host}}/api/tasks
+
+### Создание задачи
+POST {{host}}/api/tasks
+Content-Type: application/json
+
+{
+  "title": "Подготовить отчёт",
+  "description": "Лабораторная работа 9"
+}
+
+### Получить задачу (замените 1 на настоящий id)
+GET {{host}}/api/tasks/1
+
+### Изменить статус
+PATCH {{host}}/api/tasks/1/status
+Content-Type: application/json
+
+{
+  "status": "InProgress"
+}
+
+### Удалить задачу
+DELETE {{host}}/api/tasks/1
